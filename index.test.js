@@ -12,7 +12,7 @@ import {
   fizzbuzz,
 } from "./index.js";
 
-describe("echo", function () {
+describe.only("echo", function () {
   it("returns repeated word for n > 1", function () {
     expect(echo("bird", 3)).toBe("birdbirdbird");
   });

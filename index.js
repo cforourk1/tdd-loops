@@ -11,9 +11,15 @@
  * echo("test", 1); // "test"
  */
 export function echo(word, n) {
-  // TODO
+/* I needed to have a result value initialized. i is the counter - n is the number of times it needs to count. += means add to the variable. so result =+ word means I am adding word + word until the loop finishes. The result needs to return outside of the function in order to be correctly executed.
+*/
+  let result = "";
+for (let i = 0; i < n; i++) {
+  result += word;
 }
-
+return result;
+console.log(result)
+}
 /**
  * @param {string} word - The word to repeat.
  * @param {number} n - The number of times to repeat the word.
