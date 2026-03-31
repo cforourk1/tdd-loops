@@ -162,7 +162,7 @@ let result = 0;
       return 0;
     }
   for (let i = 1; i <= n; i += 2) {
-// for odd numbers need to start at 1, to include n add less than or equal to. Then += 2 ito increment by 2 to get my odd numbers 
+// for odd numbers need to start at 1, to include n add less than or equal to. Then += 2 ito increment by 2 to get my odd numbers
     result += i;
   }
   return result;
@@ -189,8 +189,22 @@ let result = 0;
  * getGrowthTime(5, 78); // 80
  */
 export function getGrowthTime(start, target) {
-  // TODO
+let result = 0;
+      if (start <= 0) {
+//retuning 0 if 0 is entered
+      return undefined;
+    }
+/* return undefined
+*/
+  for (let i = start; i >= target; i *= 2) {
+// starting then while less than or equal
+    result += 1;
+  }
+    result *= 20
+    return result;
 }
+
+
 
 
 //function 8

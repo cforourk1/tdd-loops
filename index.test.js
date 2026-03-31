@@ -111,7 +111,7 @@ describe("countdown", function () {
   });
 });
 
-describe.only("sumOddsToN", function () {
+describe("sumOddsToN", function () {
   it("returns sum of odds for n > 1", function () {
     expect(sumOddsToN(5)).toBe(9);
   });
@@ -129,7 +129,7 @@ describe.only("sumOddsToN", function () {
   });
 });
 
-describe("getGrowthTime", function () {
+describe.only("getGrowthTime", function () {
   it("returns undefined if start <= 0", function () {
     expect(getGrowthTime(0, 10)).toBeUndefined();
     expect(getGrowthTime(-5, 10)).toBeUndefined();
