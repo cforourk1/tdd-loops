@@ -48,7 +48,7 @@ describe("echoWithSpace", function () {
   });
 });
 
-describe.only("sumTo", function () {
+describe("sumTo", function () {
   it("returns sum for n > 1", function () {
     expect(sumTo(5)).toBe(15);
   });
@@ -111,7 +111,7 @@ describe("countdown", function () {
   });
 });
 
-describe("sumOddsToN", function () {
+describe.only("sumOddsToN", function () {
   it("returns sum of odds for n > 1", function () {
     expect(sumOddsToN(5)).toBe(9);
   });

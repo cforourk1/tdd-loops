@@ -97,8 +97,21 @@ return result;
  * sumFromTo(2, 2); // 2
  */
 export function sumFromTo(a, z) {
-  // TODO
-}
+let result = 0;
+      if (a === 0) {
+//retuning 0 if 0 is entered
+      return 0;
+    }
+/* return 0 if 0 entered and then I said let my initial iterator = a and while it is less than or equal to z - add and return that result. I finally got one without a lot of help and yes I cried.
+*/
+  for (let i = a; i <= z; i++) {
+// i is the numbers it iterates on its own so we are adding it to n each time it loops through. god this is hard
+    result += i;
+  }
+    return result;
+  }
+
+//Function 5
 
 /**
  * Counts down from n to 1, inclusive, by logging each number to the console.
@@ -112,8 +125,22 @@ export function sumFromTo(a, z) {
  * countdown(5); // logs 5, 4, 3, 2, 1
  */
 export function countdown(n) {
-  // TODO
-}
+      if (n === 0) {
+//retuning 0 if 0 is entered
+      return 0;
+    }
+/* return 0 if 0 entered and then I said let my initial iterator = a and while it is less than or equal to z - add and return that result.
+*/
+  for (let i = n; i > 0; i--) {
+// my iteration becomes the countdown because I am subtracting from n on each loop.
+    console.log(i)
+  }
+  }
+
+
+
+
+//function 6
 
 /**
  * @param {number} n - The ending number.
@@ -127,8 +154,23 @@ export function countdown(n) {
  * sumOddsToN(1); // 1
  */
 export function sumOddsToN(n) {
-  // TODO
+/*i is my counter name starting at 0. it will keep looping as long as it is less than N - the number passed to the parameter. After each loop it adds 1 to the iterator until it reaches the number
+*/
+let result = 0;
+      if (n === 0) {
+//retuning 0 if 0 is entered
+      return 0;
+    }
+  for (let i = 1; i <= n; i += 2) {
+// for odd numbers need to start at 1, to include n add less than or equal to. Then += 2 ito increment by 2 to get my odd numbers 
+    result += i;
+  }
+  return result;
 }
+
+// function 7
+
+
 
 /**
  * A petri dish starts with a certain number of bacteria cells.
@@ -150,6 +192,10 @@ export function getGrowthTime(start, target) {
   // TODO
 }
 
+
+//function 8
+
+
 /**
  * The amount of money in a savings account grows by a certain rate every year.
  *
@@ -169,6 +215,9 @@ export function getGrowthTime(start, target) {
 export function getCompoundTime(start, rate, target) {
   // TODO
 }
+
+
+//function 9
 
 /**
  * An empty bucket sits some distance away from a water faucet.
@@ -195,6 +244,9 @@ export function getCompoundTime(start, rate, target) {
 export function moveWater(colander, bucket) {
   // TODO
 }
+
+
+// function 10
 
 /**
  * This is a classic interview question! :)
