@@ -52,7 +52,8 @@ export function echoWithSpace(word, n) {
 return result;
 }
 
-  // TODO
+
+// function 3
 
 
 /**
@@ -67,8 +68,21 @@ return result;
  * sumTo(100); // 5050
  */
 export function sumTo(n) {
-  // TODO
+/*i is my counter name starting at 0. it will keep looping as long as it is less than N - the number passed to the parameter. After each loop it adds 1 to the iterator until it reaches the number
+*/
+let result = 0;
+      if (n === 0) {
+//retuning 0 if 0 is entered
+      return 0;
+    }
+  for (let i = 0; i <= n; i++) {
+// i is the numbers it iterates on its own so we are adding it to n each time it loops through. god this is hard
+    result += i;
+  }
+return result;
 }
+
+//function 4
 
 /**
  * @param {number} a - The starting integer.

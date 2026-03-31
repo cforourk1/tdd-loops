@@ -30,7 +30,7 @@ describe("echo", function () {
   });
 });
 
-describe.only("echoWithSpace", function () {
+describe("echoWithSpace", function () {
   it("returns repeated word with spaces for n > 1", function () {
     expect(echoWithSpace("badger", 3)).toBe("badger badger badger");
   });
@@ -48,7 +48,7 @@ describe.only("echoWithSpace", function () {
   });
 });
 
-describe("sumTo", function () {
+describe.only("sumTo", function () {
   it("returns sum for n > 1", function () {
     expect(sumTo(5)).toBe(15);
   });
