@@ -12,7 +12,7 @@ import {
   fizzbuzz,
 } from "./index.js";
 
-describe.only("echo", function () {
+describe("echo", function () {
   it("returns repeated word for n > 1", function () {
     expect(echo("bird", 3)).toBe("birdbirdbird");
   });
@@ -30,7 +30,7 @@ describe.only("echo", function () {
   });
 });
 
-describe("echoWithSpace", function () {
+describe.only("echoWithSpace", function () {
   it("returns repeated word with spaces for n > 1", function () {
     expect(echoWithSpace("badger", 3)).toBe("badger badger badger");
   });

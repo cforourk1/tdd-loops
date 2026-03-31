@@ -20,6 +20,7 @@ for (let i = 0; i < n; i++) {
 return result;
 console.log(result)
 }
+// function number 2
 /**
  * @param {string} word - The word to repeat.
  * @param {number} n - The number of times to repeat the word.
@@ -32,9 +33,27 @@ console.log(result)
  * @example
  * echoWithSpace("test", 1); // "test"
  */
+
 export function echoWithSpace(word, n) {
-  // TODO
+/* this one very nearly broke me. idk why but loops are hard with looking at numbers. it is really intimidating. But here is what I learned. i is a universal sign for iteration. when addiung spaces it cant be added to first one otherwise we have a trail. so it passes an empty string as the word. The check says if word is empty - dont loop just return empty. I then said if the counter is zero do result + word (variable) then added the space
+*/
+
+    let result = "";
+      if (word === "") {
+      return "";
+    }
+  for (let i = 0; i < n; i++) {
+    if (i === 0) {
+      result += word;
+    } else {
+      result += " " + word;
+    }
+  }
+return result;
 }
+
+  // TODO
+
 
 /**
  * @param {number} n - The number to stop at
