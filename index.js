@@ -196,16 +196,13 @@ let result = 0;
     }
 /* return undefined
 */
-  for (let i = start; i >= target; i *= 2) {
+  for (let i = start; i <= target; i *= 2) {
 // starting then while less than or equal
     result += 1;
   }
     result *= 20
     return result;
 }
-
-
-
 
 //function 8
 
@@ -227,8 +224,23 @@ let result = 0;
  * getCompoundTime(30000, 0.04, 50000); // 14
  */
 export function getCompoundTime(start, rate, target) {
-  // TODO
+//return undefined if start or rate is less than or equal to 0
+  let result = 0;
+      if (start <= 0 || rate <= 0) {
+      return undefined;
+    } else if (start >= target) {
+//retuning 0 if 0 is entered
+      return 0;
+    }
+/* return undefined
+*/
+  for (let i = start; i <= target; i *= (1 + rate)) {
+// iteration is whatever is enteres as the start - greater eual to target - iterate the rate per year - result gives us the target years to gain interest
+    result += 1;
+  }
+    return result;
 }
+
 
 
 //function 9
@@ -255,9 +267,25 @@ export function getCompoundTime(start, rate, target) {
  * @example
  * moveWater(7, 3); // 1
  */
+
 export function moveWater(colander, bucket) {
-  // TODO
+  let result = 0;
+// return undefined if 0 or less than
+  if (colander <= 0) {
+  return undefined
+  }
+  while (bucket > 0) {
+// add 1 cup to bucket
+  result += 1;
+// bucket - colander - colander loses a cup while it is greater than 1
+  bucket -= colander;
+  if (colander > 1) {
+    colander -= 1;
+  }
 }
+    return result
+}
+
 
 
 // function 10
@@ -279,5 +307,23 @@ export function moveWater(colander, bucket) {
  * fizzbuzz(15); // logs 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz
  */
 export function fizzbuzz(n) {
-  // TODO
+let result = 0;
+      if (n === 0) {
+//retuning 0 if 0 is entered
+      return 0;
+    }
+  for (let i = 1; i <= n; i ++) {
+// if the number is both a multiple of 3 and 5 log fizzbuzz
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("fizzbuzz");
+  } else if (i % 3 === 0 && i % 5 != 0) {
+// if multiple of 3 but not of 5 log fizz
+    console.log("fizz");
+  } else if (i % 3 != 0 && i % 5 === 0) {
+//if multiple of 5 but not 3 
+    console.log("buzz");
+  } else {
+    console.log(i);
+  }
+}
 }

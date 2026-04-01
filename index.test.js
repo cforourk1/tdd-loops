@@ -129,7 +129,7 @@ describe("sumOddsToN", function () {
   });
 });
 
-describe.only("getGrowthTime", function () {
+describe("getGrowthTime", function () {
   it("returns undefined if start <= 0", function () {
     expect(getGrowthTime(0, 10)).toBeUndefined();
     expect(getGrowthTime(-5, 10)).toBeUndefined();
@@ -194,7 +194,7 @@ describe("moveWater", function () {
   });
 });
 
-describe("fizzbuzz", function () {
+describe.only("fizzbuzz", function () {
   let spy;
   beforeAll(function () {
     spy = vi.spyOn(console, "log");
